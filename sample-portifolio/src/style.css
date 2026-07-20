@@ -6,6 +6,7 @@
     --cinza-medio: #CCCCCC;
     --cinza-escuro: #333333;
     --preto: #000000;
+    --verde-color: #0cd3c9;
     --fonte-titulo: 'Poppins', sans-serif;
     --fonte-texto: 'Open Sans', sans-serif;
 }
@@ -23,18 +24,18 @@ body {
     line-height: 1.6;
 }
 
+/* Cabeçalho */
 header {
-    background-color: var(--azul-primario);
+    background-color: var(--verde-color);
     color: var(--branco);
     padding: 1rem 0;
     position: fixed;
-    width: 100%;
-    height: 60px;
+    width: 100%; 
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
 }
 
 nav ul {
@@ -60,25 +61,26 @@ header h1 {
     font-size: 1.5rem;
 }
 
+/* Hero Section */
 .hero{
-    margin-top:60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;    
-    padding: 2rem;
+    padding: 4rem 2rem;
+    text-align: center;
+    align-items: center; 
 }
 
 .hero h2 {
     font-family: var(--fonte-titulo);
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: var(--preto);
 }
 
 .hero p {
-    font-family: var(--fonte-texto);
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.2rem;  
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-button {
@@ -97,3 +99,138 @@ header h1 {
     background-color: var(--azul-secundario);
 }
 
+/* Seção Sobre */
+.sobre{
+    width:90%;
+    margin:auto;
+    padding:80px 0;
+}
+
+/* Skills seção tecnologias */
+.skills{
+    width:90%;
+    margin:auto;
+    padding:80px 0;
+}
+
+.slider{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.cards{
+    display:grid;
+    grid-auto-flow:column;
+    grid-auto-columns: 180px;   
+    gap:20px;  
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+}
+
+.cards::-webkit-scrollbar{
+    display:none;
+}
+
+.card{
+
+    height:180px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    border-radius:15px;
+    background: var(--verde-color);
+    color:white;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card i{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.btn{
+    background-color: var(--azul-primario);
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:25px;
+}
+
+/* Seção Contato */
+.contato {
+    padding: 2rem 2rem;
+    text-align: center;
+    background-color: var(--cinza-claro);
+}
+
+.contato h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: var(--azul-primario);
+}
+
+.form-group {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-family: var(--fonte-texto);
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+#buscar-cep {
+    background-color: var(--azul-primario);
+    color: var(--branco);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+#buscar-cep:hover {
+    background-color: var(--azul-secundario);
+}
+
+.submit-button {
+    background-color: var(--azul-primario);
+    color: var(--branco);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--azul-secundario);
+}
