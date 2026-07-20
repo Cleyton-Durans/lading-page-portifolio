@@ -1,39 +1,96 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portifólio de um desenvolvedor front-end" />
-    <!-- Google Font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="./src/assets/style.css" rel="stylesheet">
-    <title>sample-portifolio</title>
-  </head>
-  <body>
-    <div id="app">
-      <header>
-        <h1> Meu Portifólio </h1>
-        
-        <nav>
-          <ul>
-            <li><a href="#">Hero</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav> 
 
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="#" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portifólio de um desenvolvedor front-end" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Sample Portifólio</title>
+  <!-- Font Awesome e style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="./src/style.css" rel="stylesheet">
 
-      <section id="hero"  class="hero" style="border: 3px solid red;">
-          <h2> Ambiente Hero </h2>
-      </section>
+</head>
 
+<body>
+  <div id="app">
+    <header>
+      <h1> Meu Portifólio </h1>
 
-    </div>
+      <nav>
+        <ul>
+          <li><a href="#">Hero</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="hero" class="hero">
+      <h2>Bem-vindo ao meu portfólio!</h2>
+      <p>Sou um desenvolvedor apaixonado por criar soluções inovadoras.</p>
+      <button id="cta-button" class="cta-button">Saiba Mais</button>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="sobre">
+      <h2>Sobre Mim</h2>
+      <p>Aqui você pode adicionar uma breve descrição sobre você, suas habilidades e experiências.</p>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="contato">
+      <h2>Contato</h2>
+      <form id="formulario-contato">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" required>
+          <button type="button" id="buscar-cep">Buscar CEP</button>
+        </div>
+        <div class="form-group">
+          <label for="logradouro">Logradouro:</label>
+          <input type="text" id="logradouro" name="logradouro" readonly>
+        </div>
+        <div class="form-group">
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" name="bairro" readonly>
+        </div>
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" readonly>
+        </div>
+        <button type="submit" class="submit-button">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Script principal -->
     <script type="module" src="/src/main.js"></script>
-  </body>
+</body>
+
+</html>
+
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
