@@ -184,6 +184,7 @@ header h1 {
 
 .slider{
     display:flex;
+    width: 960px;
     justify-content: center;
     align-items: center;
     gap:20px;
