@@ -27,14 +27,14 @@ body {
 /* Cabeçalho */
 header {
     background-color: var(--verde-color);
-    color: var(--branco);   
+    color: var(--preto);   
     position: fixed;
     width: 100%; 
     top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
 }
 
 nav ul {
@@ -44,20 +44,21 @@ nav ul {
 }
 
 nav ul li a {
-    color: var(--branco);
+    color: var(--preto);
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--cinza-medio);
-    border-bottom: 2px solid var(--azul-primario);
+    color: var(--cinza-escuro);
 }
+
 
 header h1 {
     font-family: var(--fonte-titulo);
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 /* Estilo para o link de download do currículo */
 .download-cv {
@@ -79,8 +80,11 @@ header h1 {
 
 /* Hero Section */
 .hero{
-    padding: 1rem 4rem;
-    margin-top: 60px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-top: 50px;
     gap: 20px;
 }
 
@@ -148,8 +152,7 @@ header h1 {
     font-weight: 600;
     font-family: var(--fonte-titulo);
     white-space: wrap;
-    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
-
+    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);  
     }
 
 .titulo:after {
@@ -191,6 +194,7 @@ header h1 {
 
 .cards{
     display:grid;
+    max-width: 980px;
     grid-auto-flow:column;
     grid-auto-columns: 180px;   
     gap:20px;  
