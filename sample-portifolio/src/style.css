@@ -27,13 +27,12 @@ body {
 /* Cabeçalho */
 header {
     background-color: var(--verde-color);
-    color: var(--branco);
-    padding: 1rem 0;
+    color: var(--branco);   
     position: fixed;
     width: 100%; 
     top: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 2rem;
 }
@@ -47,7 +46,7 @@ nav ul {
 nav ul li a {
     color: var(--branco);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
@@ -60,12 +59,29 @@ header h1 {
     font-family: var(--fonte-titulo);
     font-size: 1.5rem;
 }
+/* Estilo para o link de download do currículo */
+.download-cv {
+    display: inline-block;
+    background-color: var(--azul-primario);
+    color: var(--branco);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.download-cv:hover {
+    background-color: var(--azul-secundario);
+    transform: translateY(-2px);
+}
 
 /* Hero Section */
 .hero{
-    padding: 4rem 2rem;
-    text-align: center;
-    align-items: center; 
+    padding: 1rem 4rem;
+    margin-top: 60px;
+    gap: 20px;
 }
 
 .hero h2 {
@@ -77,10 +93,10 @@ header h1 {
 
 .hero p {
     font-size: 1.2rem;  
-    margin-bottom: 2rem;
-    max-width: 600px;
+    margin-bottom: 2rem;    
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.5;
 }
 
 .cta-button {
@@ -88,15 +104,17 @@ header h1 {
     color: var(--branco);
     padding: 1rem 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-family: var(--fonte-texto);
     font-size: 1rem;
+    font-weight: 600;
     margin-bottom: 1rem;
 }
 
 .cta-button:hover {
     background-color: var(--azul-secundario);
+    transform: translateY(-2px);
 }
 
 /* Seção Sobre */
@@ -106,16 +124,68 @@ header h1 {
     padding:80px 0;
 }
 
+/* Estilo para o conteúdo da seção Sobre */
+.sobre-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+/* Estilo para a imagem de perfil */
+.profile-img{
+    width:300px;
+    height:300px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para o título */
+.titulo {
+    font-size: 2rem;
+    color: var(--preto);
+    font-weight: 600;
+    font-family: var(--fonte-titulo);
+    white-space: wrap;
+    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+
+    }
+
+.titulo:after {
+    content: '|';
+    margin-left: 2px;
+    animation: blink 0.s infinite;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    opacity: 1;
+}
+
 /* Skills seção tecnologias */
 .skills{
-    width:90%;
+    width:100%;
     margin:auto;
-    padding:80px 0;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    padding:100px 0;
+    background-color: var(--cinza-escuro);
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--branco);
+    font-weight: 500;
+    font-family: var(--fonte-titulo);
 }
 
 .slider{
     display:flex;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     gap:20px;
 }
 
@@ -133,8 +203,7 @@ header h1 {
     display:none;
 }
 
-.card{
-
+.card{  
     height:180px;
     display:flex;
     flex-direction:column;
@@ -174,9 +243,9 @@ header h1 {
 
 .contato h2 {
     font-family: var(--fonte-titulo);
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
-    color: var(--azul-primario);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--preto);
 }
 
 .form-group {
@@ -233,4 +302,36 @@ header h1 {
 
 .submit-button:hover {
     background-color: var(--azul-secundario);
+}
+
+footer {
+    text-align: center;
+    height: 20vh;
+    padding: 2rem;
+    background-color: var(--cinza-escuro);
+}
+
+footer p {
+    color: var(--branco);
+    font-family: var(--fonte-texto);
+    font-size: 1rem;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.redes-sociais a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.redes-sociais a:hover {
+    color: var(--azul-primario);
 }

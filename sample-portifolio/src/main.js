@@ -68,3 +68,21 @@ document.getElementById('formulario-contato').addEventListener('submit', (evento
     alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`);
     evento.target.reset(); // Limpa o formulário
 });
+
+// JavaScript para o efeito de digitação
+document.addEventListener('DOMContentLoaded', () => {
+    const titulo = document.querySelector('.titulo');
+    const texto = titulo.innerHTML;
+    const textArray = texto.split('');
+    titulo.innerHTML = '';
+    let i = 0;
+
+    function typing() {
+        if (i < textArray.length) {
+            titulo.innerHTML += textArray[i];
+            i++;
+            setTimeout(typing, 100);
+        }
+    }
+    typing();
+})
